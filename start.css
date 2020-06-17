@@ -1,0 +1,71 @@
+#box1 {
+    padding: 0px 20px;
+    /*    border: 5px blue solid;*/
+    /*    float: left;*/
+}
+
+#inboxHeader {
+    border: 5px blue solid;
+}
+
+.xImg {
+    padding: 10px;
+}
+
+#inboxContainer {
+    margin: 20px;
+    border: 5px red solid;
+
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+
+    width: 300px;
+    padding: 0px 20px;
+    margin: 5px 0px;
+    border: 5px red solid;
+
+}
+
+.xImg {
+    float: right;
+    border: 5px red solid;
+}
+
+#all-in-onelist {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+
+    width: 300px;
+    float: left;
+    border: 5px red solid;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 0px 0px 15px 0px;
+    /*어떻게 개별적으로 하나하나에 패딩을 주지?*/
+}
+
+#inboxImg {
+    padding: 0px 20px;
+    /*    margin: 20px 0px;*/
+    float: right;
+    border: 5px red solid;
+}
+
+#footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    clear: both;
+    padding: 20px;
+    /*        border: 5px red solid;*/
+
+}
