@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cf. compare, first hand.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/cah2svq.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <!--  메뉴 겉치레-->
+    <div class="menuBar">
+        <span><a href="main.html" style="font-size: 32px;color: #535353; padding-top: 20px;">cf.</a></span>
+
+        <div class="menuIconGroup">
+            <button class="openbtn" onclick="openNav()"><img id="menuIcon" src="img/menu_icon.png"></button>
+        </div>
+    </div>
+    <!--    메뉴안짝-->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!--메뉴 동작 자바스크립트-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <!--       박스들-->
+    <div class="container">
+        <div class="item" draggable="true" ondragstart="drag(event)" id="drag1">
+            <h2>All in one</h2>
+            <a href="#">behance</a>
+            <a href="#">dribble</a>
+            <a href="#">pinterest</a>
+        </div>
+        <div class="item" draggable="true">
+            <h2>UI/UX</h2>
+            <a href="#">behance</a>
+            <a href="#">dribble</a>
+            <a href="#">pinterest</a>
+
+        </div>
+        <div class="item" draggable="true">
+            <h2>Inspiration</h2>
+            <a href="#">behance</a>
+            <a href="#">dribble</a>
+            <a href="#">pinterest</a>
+        </div>
+        <div class="item" draggable="true">
+            <h2>reference</h2>
+            <a href="#">behance</a>
+            <a href="#">dribble</a>
+            <a href="#">pinterest</a>
+        </div>
+        <div class="item" draggable="true">
+            <h2>Food</h2>
+            <a href="#">behance</a>
+            <a href="#">dribble</a>
+            <a href="#">pinterest</a>
+        </div>
+        <div class="item" draggable="true">
+            <h2>meme</h2>
+            <a href="#">behance</a>
+            <a href="#">dribble</a>
+            <a href="#">pinterest</a>
+
+        </div>
+    </div>
+    <!--    박스 동작 자바스크립트-->
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    </script>
+<!--    박스 바깥헤더-->
+    <div class="searchIconGroup">
+        <button class="openQ" onclick="openSearch()">
+        <img id="searchIcon" src="img/search.png"></button>
+    </div>
+</body></html>
