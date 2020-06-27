@@ -1,0 +1,542 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*좌측 메뉴*/
+.Menu {
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+    width: 96px;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    /*
+        float: left;
+        */
+    display: inline-block;
+    font-family: bookmania, serif;
+    font-style: normal;
+    box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
+}
+ 
+span {
+    display: inline-block;
+    padding-top: 32px;
+    padding-left: 32px;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.42;
+    letter-spacing: normal;
+    text-align: left;
+    color: #535353;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+}
+
+
+
+#Header {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    width: auto;
+    height: 60px;
+    top: 0px;
+    left: 96px;
+    right: 0px;
+    background-color: #ffffff;
+    text-align: right;
+    padding: 10px 20px 20px 20px;
+}
+
+/*메인
+
+/*메인 박스+스크롤*/
+#inboxContainer {
+    position: fixed;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border-radius: 2vw;
+    width: calc(100% - 136px);
+    height: 80%;
+    top: 60px;
+    left: 96px;
+    right: 0px;
+    margin: 20px;
+    padding: 0;
+    box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
+}
+
+#inboxContainer {
+    direction: rtl;
+    text-align-last: left;
+    /* css scrollbar left */
+    overflow: auto;
+}
+
+#inboxContainer::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/*막대기(짧은거)*/
+#inboxContainer::-webkit-scrollbar-thumb {
+    background-color: #e8e8e8;
+    border-radius: 15px;
+}
+
+/*여백(긴 거)*/
+#inboxContainer::-webkit-scrollbar-track {
+    border-radius: 15px;
+}
+
+/*박스 좌측 링크들*/
+#all-in-onelist {
+    position: relative;
+    overflow-y: visible;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vw;
+    font-weight: 700;
+    width: calc(30% - 60px);
+    height: auto;
+    float: left;
+    padding: 20px 20px 30px 40px;
+    /*border: 5px red solid;*/
+}
+
+a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 0;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: .0.2s;
+    /*어떻게 개별적으로 하나하나에 패딩을 주지?*/
+}
+
+a:not(.add):hover {
+    color: #535353;
+    opacity: 0.8;
+}
+
+.each_link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.add {
+    text-decoration: underline;
+    text-decoration-color: #fa3838;
+    color: #fa3838;
+    opacity: 0.2;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: .0.2s;
+}
+
+.add:hover {
+    color: #fa3838;
+    opacity: 0.7;
+}
+
+/* 리스트 링크 마우스 대면 태그 나오는 거 만들기 시작*/
+li {
+    width: 100%;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: .0.2s;
+}
+
+.behance:hover {
+    padding-bottom: 50px;
+}
+
+.behancetag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.behance {
+    position: relative;
+    display: inline-block;
+}
+
+.behancetag {
+    display: none;
+    position: absolute;
+}
+
+.behance:hover .behancetag {
+    display: inline;
+}
+
+.behance2:hover {
+    padding-bottom: 50px;
+}
+
+.behance2tag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.behance2 {
+    position: relative;
+    display: inline-block;
+}
+
+.behance2tag {
+    display: none;
+    position: absolute;
+}
+
+.behance2:hover .behance2tag {
+    display: inline;
+}
+
+.pinterest:hover {
+    padding-bottom: 50px;
+}
+
+.pinteresttag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.pinterest {
+    position: relative;
+    display: inline-block;
+}
+
+.pinteresttag {
+    display: none;
+    position: absolute;
+}
+
+.pinterest:hover .pinteresttag {
+    display: inline;
+}
+
+.pinterest2:hover {
+    padding-bottom: 50px;
+}
+
+.pinterest2tag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.pinterest2 {
+    position: relative;
+    display: inline-block;
+}
+
+.pinterest2tag {
+    display: none;
+    position: absolute;
+}
+
+.pinterest2:hover .pinterest2tag {
+    display: inline;
+}
+
+.dribble:hover {
+    padding-bottom: 50px;
+}
+
+.dribbletag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.dribble {
+    position: relative;
+    display: inline-block;
+}
+
+.dribbletag {
+    display: none;
+    position: absolute;
+}
+
+.dribble:hover .dribbletag {
+    display: inline;
+}
+
+.dribble2:hover {
+    padding-bottom: 50px;
+}
+
+.dribble2tag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.dribble2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dribble2tag {
+    display: none;
+    position: absolute;
+}
+
+.dribble2:hover .dribble2tag {
+    display: inline;
+}
+
+.evernote:hover {
+    padding-bottom: 50px;
+}
+
+.evernotetag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.evernote {
+    position: relative;
+    display: inline-block;
+}
+
+.evernotetag {
+    display: none;
+    position: absolute;
+}
+
+.evernote:hover .evernotetag {
+    display: inline;
+}
+
+.evernote2:hover {
+    padding-bottom: 50px;
+}
+
+.evernote2tag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.evernote2 {
+    position: relative;
+    display: inline-block;
+}
+
+.evernote2tag {
+    display: none;
+    position: absolute;
+}
+
+.evernote2:hover .evernote2tag {
+    display: inline;
+}
+
+.dmarks:hover {
+    padding-bottom: 50px;
+}
+
+.dmarkstag {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    line-height: 0;
+    margin-top: -15px;
+}
+
+.dmarks {
+    position: relative;
+    display: inline-block;
+}
+
+.dmarkstag {
+    display: none;
+    position: absolute;
+}
+
+.dmarks:hover .dmarkstag {
+    display: inline;
+}
+
+
+/*박스 우측 이미지*/
+#infixContainer {
+    box-sizing: border-box;
+    border-radius: 2vw;
+    width: calc(100% - 156px);
+    height: 80%;
+    float: right;
+
+    margin: 0px 20px 20px 40px;
+    padding: 0;
+}
+
+
+#fix_contents {
+    position: relative;
+    float: right;
+    width: calc(70% - 60px);
+    height: 100%;
+    top: 90px;
+    padding: 20px 40px 30px 20px;
+    margin: 0;
+}
+
+/*박스 상단 올인원+엑스+버튼*/
+.inboxCategory {
+    position: relative;
+
+    float: right;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    font-weight: 600;
+    width: 300px;
+    padding: 0px 20px;
+    margin: 5px 0px;
+}
+
+.xImg {
+    float: right;
+    padding: 10px;
+}
+
+.controls {
+    display: inline;
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+button {
+    border: none;
+    opacity: 0.3;
+    background-color: #e8e8e8;
+    color: #252525;
+    border-radius: 5px;
+
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: .0.2s;
+}
+
+
+button:hover {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+
+.inboxImg {
+    box-sizing: border-box;
+    border-radius: 2vw;
+    display: inline-block;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+    padding: 0;
+    margin: 0;
+
+    background-color: #ddd;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*박스 우측 메모패드*/
+.Memopad {
+    z-index: 2;
+    display: inline-block;
+    position: relative;
+    width: 98%;
+    height: auto;
+    padding: 0;
+}
+
+input {
+    width: 99%;
+    height: auto;
+    /* 높이 초기화 */
+    line-height: normal;
+    /* line-height 초기화 */
+    padding: .8em .5em;
+    /* 여백 설정 */
+    color: #252525;
+    opacity: 0.3;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: .0.2s;
+}
+
+input:hover {
+    color: #252525;
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+}
