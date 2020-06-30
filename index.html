@@ -18,7 +18,7 @@
         <!--        헤더 서치버튼-->
         <div class="searchBody">
             <div class="middle">
-                <form class="search-box" action="index.html" method="post">
+                <form clRndeass="search-box" action="index.html" method="post">
                     <input type="text" class="inputSer" name="" value="">
                     <button type="button" class="btnSer" name="button"></button>
                 </form>
@@ -29,7 +29,6 @@
                     $(".inputSer").toggleClass("inclicked");
                     $(".btnSer").toggleClass("close");
                 });
-
             </script>
         </div>
     </div>
@@ -47,10 +46,15 @@
     <!--    메뉴안짝-->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+
+        <a href="#">All cf.</a>
+        <br>
+        <a href="#">All-in-one</a>
+        <a href="#">Inspiration</a>
+        <a href="#">Designer flatform</a>
+        <a href="#">Resource</a>
+        <a href="#">Magazine</a>
+
     </div>
 
     <!--메뉴 동작 자바스크립트-->
@@ -64,52 +68,86 @@
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
-
     </script>
     <!--       박스들-->
-    
+
     <div class="container">
         <div class="item" draggable="true" ondragstart="drag(event)" id="drag1">
-            <button type="button" class="GotoIndex" onClick="location.href='index(imgtag).html'"><h2>All in one</h2></button>
+            <button type="button" class="GotoBox" onClick="location.href='box_index.html'">
+                <h2>All cf.</h2>
+            </button>
             <a href="#">behance</a>
             <a href="#">dribble</a>
             <a href="#">pinterest</a>
+            <a href="#">dmark</a>
+            <a href="#">evernote</a>
+            <a href="#">muzil</a>
+            <a href="#"> collect UI</a>
+            <a href="#"> straight line</a>
+            <a href="#"> culrs</a>
+            <a href="#"> nounproject</a>
+            <a href="#"> dafont</a>
+            <a href="#">fontshop</a>
+            <a href="#"> mockupworld </a>
+            <a href="#"> unsplash</a>
+            <a href="#"> w3schools</a>
+            <a href="#" style="color:darkgray;"> +</a>
         </div>
 
-        <div class="item" draggable="true">
-            <h2>UI/UX</h2>
-            <a href="#">behance</a>
-            <a href="#">dribble</a>
-            <a href="#">pinterest</a>
-
-        </div>
         <div class="item" draggable="true">
             <h2>Inspiration</h2>
             <a href="#">behance</a>
             <a href="#">dribble</a>
             <a href="#">pinterest</a>
+            <a href="#">muzli</a>
+            <a href="#">straight line</a>
+            <a href="#"> type/graphic posters</a>
+            <a href="#">collect UI</a>
+            <a href="#">culrs</a>
+            <a href="#">Architonic</a>
+            <a href="#" style="color:darkgray;"> +</a>
+        </div>
+
+        <div class="item" draggable="true">
+            <h2>All-in-one</h2>
+            <a href="#">evernote</a>
+            <a href="#">dmark</a>
+            <a href="#" style="color:darkgray;"> +</a>
+        </div>
+
+        <div class="item" draggable="true">
+            <h2>Designer flatform</h2>
+            <a href="#">Real final.psd</a>
+            <a href="#">Loud sourcing</a>
+            <a href="#">github</a>
+            <a href="#" style="color:darkgray;"> +</a>
+        </div>
+
+        <div class="item" draggable="true">
+            <h2>Resource</h2>
+            <a href="#">nounproject</a>
+            <a href="#">material design kit</a>
+            <a href="#">dafont</a>
+            <a href="#">fontshop</a>
+            <a href="#">mockupworld </a>
+            <a href="#">unsplash</a>
+            <a href="#">shutterstock</a>
+            <a href="#" style="color:darkgray;"> +</a>
         </div>
         <div class="item" draggable="true">
-            <h2>reference</h2>
-            <a href="#">behance</a>
-            <a href="#">dribble</a>
-            <a href="#">pinterest</a>
-        </div>
-        <div class="item" draggable="true">
-            <h2>Food</h2>
-            <a href="#">behance</a>
-            <a href="#">dribble</a>
-            <a href="#">pinterest</a>
-        </div>
-        <div class="item" draggable="true">
-            <h2>meme</h2>
-            <a href="#">behance</a>
-            <a href="#">dribble</a>
-            <a href="#">pinterest</a>
+            <h2>Magazine</h2>
+            <a href="#">design observer</a>
+            <a href="#">design boom</a>
+            <a href="#">sight unseen</a>
+            <a href="#">dezeen</a>
+            <a href="#">wallpaper</a>
+            <a href="#">trendhunter</a>
+            <a href="#" style="color:darkgray;"> +</a>
+
 
         </div>
     </div>
-        박스 동작 자바스크립트
+    <!--        박스 동작 자바스크립트-->
     <script>
         function allowDrop(ev) {
             ev.preventDefault();
@@ -123,9 +161,6 @@
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
             ev.target.appendChild(document.getElementById(data));
-
     </script>
 
-</body>
-
-</html>
+</body></html>
