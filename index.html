@@ -10,12 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="detail/dragdrop/html5sortable.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
     <!--    박스 바깥헤더-->
     <div class="topnav">
         <!--        헤더 서치버튼-->
+
         <div class="searchBody">
             <div class="middle">
                 <form clRndeass="search-box" action="index.html" method="post">
@@ -36,7 +38,7 @@
 
     <!--  메뉴 겉치레-->
     <div class="menuBar">
-        <span><a href="main.html" style="font-size: 32px;color: #535353; padding-top: 30px;">cf.</a></span>
+        <div><a href="index.html" class="logologo">cf.</a></div>
 
         <div class="menuIconGroup">
             <button class="openbtn" onclick="openNav()"><img id="menuIcon" src="img/menu_icon.png"></button>
@@ -51,7 +53,7 @@
         <br>
         <a href="#">All-in-one</a>
         <a href="#">Inspiration</a>
-        <a href="#">Designer flatform</a>
+        <a href="#">Designer platform</a>
         <a href="#">Resource</a>
         <a href="#">Magazine</a>
 
@@ -73,7 +75,7 @@
 
     <div class="container">
         <div class="item" draggable="true" ondragstart="drag(event)" id="drag1">
-            <button type="button" class="GotoBox" onClick="location.href='box_index.html'">
+            <button type="button" id="modal_opne_btn">
                 <h2>All cf.</h2>
             </button>
             <a href="#">behance</a>
@@ -82,20 +84,22 @@
             <a href="#">dmark</a>
             <a href="#">evernote</a>
             <a href="#">muzil</a>
-            <a href="#"> collect UI</a>
-            <a href="#"> straight line</a>
-            <a href="#"> culrs</a>
-            <a href="#"> nounproject</a>
-            <a href="#"> dafont</a>
+            <a href="#">collect UI</a>
+            <a href="#">straight line</a>
+            <a href="#">culrs</a>
+            <a href="#">nounproject</a>
+            <a href="#">dafont</a>
             <a href="#">fontshop</a>
-            <a href="#"> mockupworld </a>
-            <a href="#"> unsplash</a>
-            <a href="#"> w3schools</a>
+            <a href="#">mockupworld </a>
+            <a href="#">unsplash</a>
+            <a href="#">w3schools</a>
             <a href="#" style="color:darkgray;"> +</a>
         </div>
 
         <div class="item" draggable="true">
-            <h2>Inspiration</h2>
+            <button type="button" id="modal_opne_btn">
+                <h2>Inspiration</h2>
+            </button>
             <a href="#">behance</a>
             <a href="#">dribble</a>
             <a href="#">pinterest</a>
@@ -109,14 +113,18 @@
         </div>
 
         <div class="item" draggable="true">
-            <h2>All-in-one</h2>
+            <button type="button" id="modal_opne_btn">
+                <h2>All in one</h2>
+            </button>
             <a href="#">evernote</a>
             <a href="#">dmark</a>
             <a href="#" style="color:darkgray;"> +</a>
         </div>
 
         <div class="item" draggable="true">
-            <h2>Designer flatform</h2>
+            <button type="button" id="modal_opne_btn">
+                <h2>Designer platform</h2>
+            </button>
             <a href="#">Real final.psd</a>
             <a href="#">Loud sourcing</a>
             <a href="#">github</a>
@@ -124,7 +132,9 @@
         </div>
 
         <div class="item" draggable="true">
-            <h2>Resource</h2>
+            <button type="button" id="modal_opne_btn">
+                <h2>Resource</h2>
+            </button>
             <a href="#">nounproject</a>
             <a href="#">material design kit</a>
             <a href="#">dafont</a>
@@ -135,7 +145,9 @@
             <a href="#" style="color:darkgray;"> +</a>
         </div>
         <div class="item" draggable="true">
-            <h2>Magazine</h2>
+            <button type="button" id="modal_opne_btn">
+                <h2>Resource</h2>
+            </button>
             <a href="#">design observer</a>
             <a href="#">design boom</a>
             <a href="#">sight unseen</a>
@@ -143,8 +155,10 @@
             <a href="#">wallpaper</a>
             <a href="#">trendhunter</a>
             <a href="#" style="color:darkgray;"> +</a>
-
-
+        </div>
+        <div class="item" draggable="true">
+            <h2>+</h2>
+            <a href="#" style="color:darkgray;"> +</a>
         </div>
     </div>
     <!--        박스 동작 자바스크립트-->
@@ -162,5 +176,164 @@
             var data = ev.dataTransfer.getData("text");
             ev.target.appendChild(document.getElementById(data));
     </script>
+    <!--여기부터 모달-->
 
+    <div id="root">
+
+        <button type="button" id="modal_opne_btn">
+            <h2>All cf.</h2>
+        </button>
+
+    </div>
+
+    <div id="modal">
+
+        <div class="modal_content">
+            <!--박스 안의 헤더.all-in-one이랑 x자 있음-->
+            <div id="inboxContainer">
+
+                <!-- 박스 안의 내용물. 링크들+사진있음-->
+                <div style="clear: both"></div>
+                <div id="all-in-onelist">
+                    <ul class="each_link">
+                        <li class="on_link"><a class="onlink_atag" href="https://www.behance.net/">Behance</a>
+                            <div class="undertag">
+                                <button type="button" class="underbutton"><a>portfolio</a></button>
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">quality</button>
+                                <button type="button" class="underbutton">English</button><br>
+                                <button type="button" class="underbutton">inspiration</button>
+                                <button type="button" class="underbutton">product</button>
+                                <button type="button" class="underbutton">UI</button>
+                                <button type="button" class="underbutton">UX</button>
+                                <button type="button" class="underbutton">photo</button>
+                            </div>
+                        </li>
+                        <li class="on_link"><a class="onlink_atag" href="https://dribbble.com/">Dribble</a>
+                            <div class="undertag">
+                                <button type="button" class="underbutton"><a>portfolio</a></button>
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">quality</button>
+                                <button type="button" class="underbutton">English</button><br>
+                                <button type="button" class="underbutton">inspiration</button>
+                                <button type="button" class="underbutton">illustration</button>
+                                <button type="button" class="underbutton">UI</button>
+                                <button type="button" class="underbutton">web</button>
+                            </div>
+                        </li>
+                        <li class="on_link"><a class="onlink_atag" href="https://www.pinterest.com/">Pinterest</a>
+                            <div class="undertag">
+
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">inspiration</button>
+                                <button type="button" class="underbutton">English</button><br>
+
+                                <button type="button" class="underbutton">illustration</button>
+                                <button type="button" class="underbutton">UI</button>
+                                <button type="button" class="underbutton">photo</button>
+                                <button type="button" class="underbutton">image</button>
+                            </div>
+                        </li>
+                        <li class="on_link"><a class="onlink_atag" href="https://muz.li">Muzli</a>
+                            <div class="undertag">
+
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">inspiration</button>
+                                <button type="button" class="underbutton">English</button><br>
+                                <button type="button" class="underbutton">illustration</button>
+                                <button type="button" class="underbutton">UI</button>
+                                <button type="button" class="underbutton">web</button>
+                                <button type="button" class="underbutton">image</button>
+                            </div>
+                        </li>
+                        <li class="on_link"><a class="onlink_atag" href="http://dmark.kr">Dmark</a>
+                            <div class="undertag">
+                                <button type="button" class="underbutton"><a>links</a></button>
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">Korean</button><br>
+                                <button type="button" class="underbutton">resource</button>
+                                <button type="button" class="underbutton">free</button>
+                                <button type="button" class="underbutton">all-in-one</button>
+
+                            </div>
+                        </li>
+                        <li class="on_link"><a class="onlink_atag" href="https://www.evernote.design">Evernote</a>
+                            <div class="undertag">
+                                <button type="button" class="underbutton"><a>links</a></button>
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">English</button><br>
+                                <button type="button" class="underbutton">tools</button>
+                                <button type="button" class="underbutton">resource</button>
+                                <button type="button" class="underbutton">all-in-one</button>
+                            </div>
+                        </li>
+                        <li class="on_link"><a class="onlink_atag" href="https://thenounproject.com">Nounproject</a>
+                            <div class="undertag">
+                                <button type="button" class="underbutton"><a>icon</a></button>
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">English</button><br>
+                                <button type="button" class="underbutton">illustration</button>
+                                <button type="button" class="underbutton">resource</button>
+                                <button type="button" class="underbutton">free</button>
+                            </div>
+                        </li>
+                        <li class="on_link"><a class="onlink_atag" href="https://thenounproject.com">w3schools</a>
+                            <div class="undertag">
+                                <button type="button" class="underbutton"><a>icon</a></button>
+                                <button type="button" class="underbutton"><a>high quantity</a></button>
+                                <button type="button" class="underbutton">English</button><br>
+                                <button type="button" class="underbutton">illustration</button>
+                                <button type="button" class="underbutton">resource</button>
+                                <button type="button" class="underbutton">free</button>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a class="add" href="#">+Add</a>
+                </div>
+
+            </div>
+            <div id="infixContainer">
+                <div id="fix_contents">
+
+                    <div class=inboxCategory>
+                        <div style="float: left">
+                            <h2 class="tinyallinone">All cf.</h2>
+                        </div>
+                        <div class="tinybuttons">
+                            <button type="button" id="modal_close_btn"><img src="img/x.png" alt="x" style=" width: 20px; height: 20px;"></button>
+
+                            <div class="controls">
+                                <button class="reset" type="reset">reset</button>
+                                <button class="reset" type="reset">save</button>
+                            </div>
+
+                        </div>
+
+                        <!--왜안뜸?-->
+                        <div class="inboxImg" style="background-image:url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/dd6b2897609725.5ec91ba3dc43b.png)">
+                        </div>
+                    </div>
+                    <form class="Memopad" onsubmit="addMemo(this); return false;">
+                        <input id="memo" type="text" name="memo" placeholder="여기를 눌러 자유롭게 메모하세요" required / style="border: none;">
+
+                    </form>
+                    <div style="clear: both"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_layer"></div>
+    </div>
+
+    <script>
+        $("#modal_opne_btn").click(function() {
+
+            $("#modal").fadeIn();
+        });
+
+        $("#modal_close_btn").click(function() {
+
+            $("#modal").fadeOut();
+        });
+    </script>
 </body></html>
